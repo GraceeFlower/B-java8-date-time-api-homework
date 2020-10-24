@@ -14,8 +14,8 @@ public class Practice1 {
     int year = date.getYear();
     LocalDate thisLaborDay = LocalDate.of(year, 5, 1);
     if (date.isAfter(thisLaborDay)) {
-      return thisLaborDay.plusYears(1).getDayOfYear() + (date.lengthOfYear() - date.getDayOfYear());
+      thisLaborDay = thisLaborDay.plusYears(1);
     }
-    return thisLaborDay.getDayOfYear() - date.getDayOfYear();
+    return thisLaborDay.toEpochDay() - date.toEpochDay();
   }
 }
