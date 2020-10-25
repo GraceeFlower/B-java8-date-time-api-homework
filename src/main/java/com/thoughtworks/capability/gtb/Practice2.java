@@ -17,8 +17,7 @@ public class Practice2 {
       return date.plusDays(3);
     } else if (dayOfWeek.equals(DayOfWeek.SATURDAY)) {
       return date.plusDays(2);
-    } else {
-      return date.plusDays(1);
     }
+    return date.plusDays(1);
   }
 }
